@@ -1,0 +1,25 @@
+{
+	"Takes input from input.txt and provides output in output.txt": {
+		"prefix": "iosetup",
+		"body": [
+		  "#ifndef ONLINE_JUDGE",
+		  "    freopen(\"input.txt\", \"r\", stdin); freopen(\"output.txt\", \"w\", stdout);",
+		  "    freopen(\"debug.txt\", \"w\", stderr);",
+		  "#endif",
+		  ""
+		],
+		"description": "Takes input from input.txt and provides output in output.txt"
+	  }
+	  "ABHIJAY_DEBUG": {
+		"prefix": "abhijay_debug",
+		"body": [
+		  "#ifdef ABHIJAY_DEBUG",
+		  "    freopen(\"sample_input_1.txt\", \"r\", stdin);",
+		  "#else",
+		  "    freopen(\"debug_error.txt\", \"w\", stderr);",
+		  "#endif"
+		],
+		"description": "ABHIJAY_DEBUG"
+	  }
+	
+}

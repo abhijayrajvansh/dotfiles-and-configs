@@ -5,8 +5,7 @@ if status is-interactive
     alias getcontrol='fish /Users/abhijayrajvansh/.config/fish/greetme.fish'
     
     # Custom Functions:- version update and shortcuts
-    # Terminal
-    #custom commands: -
+    # Terminal Custom: -
     alias remove-executables='rm *.out'
     alias g++='g++-11'
     alias gcc='gcc-11'

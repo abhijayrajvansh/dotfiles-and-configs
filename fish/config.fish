@@ -418,7 +418,9 @@ if status is-interactive
     #Competitive-Programming:-
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
-    alias contest-library='echo "[Previous DIR]" && pwd && desktop && cd competitive-programming/Contest-Library'
+    # alias contest-library='echo "[Previous DIR]" && pwd && desktop && cd competitive-programming/Contest-Library'
+
+    alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'
 
     alias stl='cd /Users/abhijayrajvansh/desktop/competitive-programming/STL'
     alias containers='cd /Users/abhijayrajvansh/desktop/competitive-programming/containers'

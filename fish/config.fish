@@ -402,7 +402,6 @@ if status is-interactive
     alias personal-softwares='cd /Users/abhijayrajvansh/Personal-Softwares'
 
     alias books='cd /Users/abhijayrajvansh/Desktop/CP-Stuffs/books'
-    alias lang='desktop && cd programming-languages/'
     alias config='cd ~/.config/'
 
     #System in build:
@@ -412,12 +411,22 @@ if status is-interactive
     alias development='desktop && cd development'
     alias projects='development && cd projects'
     alias social-engineering='development && cd Social-Engineering'
-    
+
+    # Programming - Languages
+    alias lang='cd /Users/abhijayrajvansh/Desktop/programming-languages'
+
+    function push-lang
+        lang
+        git-push "Updaying programming languages and tech stack with modules 🚀"
+        echo
+        echo "Successfully Completed ✅"
+    end
+
+
 
     #Competitive-Programming:-
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
-
     alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'
 
     function push-library
@@ -446,7 +455,9 @@ if status is-interactive
         pwd
         echo ""
         dsa
-        git-push "Adding Data-Structures && Algorithms"
+        git-push "Adding New Data-Structures && Algorithms ✅"
+        echo
+        echo "Successfully Completed ✅, Lesssgoo 🚀"
     end
 
     

@@ -24,7 +24,6 @@ if status is-interactive
     alias cf-login='codeforces-login'
     alias elab='cd /Users/abhijayrajvansh/Personal-Softwares/Elab-Login-Bot && app'
 
-    
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  VS Code  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     alias git-push-vscode-snippets='cp -r /Users/abhijayrajvansh/Library/Application\ Support/Code/user/snippets/ /Users/abhijayrajvansh/Desktop/programming-environment/vscode && cd /Users/abhijayrajvansh/Desktop/programming-environment/vscode && git-push "Updating User Snippets From VScode"'
@@ -33,8 +32,6 @@ if status is-interactive
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Hackathons ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         alias hackathons='cd /Users/abhijayrajvansh/Desktop/development/Hackathons'
-
-
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  projects   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -359,7 +356,9 @@ if status is-interactive
         echo
         cp -r /Users/abhijayrajvansh/.config/fish /Users/abhijayrajvansh/desktop/programming-environment
         programming-environment
-        git-push "Updating Fish With Programming Environment"    
+        git-push "Updating Fish With Programming Environment 💙"    
+        echo
+        echo "Successfully Completed ✅"
     end
 
     function push-contest-library
@@ -418,9 +417,16 @@ if status is-interactive
     #Competitive-Programming:-
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
-    # alias contest-library='echo "[Previous DIR]" && pwd && desktop && cd competitive-programming/Contest-Library'
 
     alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'
+
+    function push-library
+        contest-library
+        git-push "Adding More Algorithms && Data Structures 🚀"
+        echo ""
+        echo "Successfully Completed ✅"
+    end
+
 
     alias stl='cd /Users/abhijayrajvansh/desktop/competitive-programming/STL'
     alias containers='cd /Users/abhijayrajvansh/desktop/competitive-programming/containers'

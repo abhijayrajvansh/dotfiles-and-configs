@@ -197,6 +197,18 @@
 		"description": "distinct elements in vector"
 	}
 
+	"input vector using loop": {
+		"prefix": "read-vector",
+		"body": [
+		  "",
+		  "for (int i = 0; i < $0.size(); i++) {",
+		  "	cin >> $0[i];",
+		  "}",
+		  "	"
+		],
+		"description": "input vector using loop"
+	}
+
 	"printing vector": {
 		"prefix": "include-output-vector",
 		"body": [

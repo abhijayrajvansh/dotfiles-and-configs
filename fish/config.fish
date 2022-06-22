@@ -27,7 +27,13 @@ if status is-interactive
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  VS Code  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     alias git-push-vscode-snippets='cp -r /Users/abhijayrajvansh/Library/Application\ Support/Code/user/snippets/ /Users/abhijayrajvansh/Desktop/programming-environment/vscode && cd /Users/abhijayrajvansh/Desktop/programming-environment/vscode && git-push "Updating User Snippets From VScode"'
-    alias push-templates='git-push-vscode-snippets'
+    
+    function push-templates
+        git-push-vscode-snippets
+        echo
+        echo "Successfully Completed ✅, lesssgoo 🚀"
+    end
+
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Hackathons ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

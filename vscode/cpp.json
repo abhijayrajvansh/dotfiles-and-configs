@@ -86,6 +86,8 @@
 		  "typedef long double ld;",
 		  "typedef unsigned long long ull;",
 		  "#define int long long",
+		  "#define yes cout << \"YES\" << nl;",
+		  "#define no cout << \"NO\" << nl;",
 		  "",
 		  "template<class Fun> class y_combinator_result {",
 		  "    Fun fun_;",

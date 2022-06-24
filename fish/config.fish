@@ -44,6 +44,7 @@ if status is-interactive
     alias project-time='cd /Users/abhijayrajvansh/Desktop/development/projects/Project-TIME'
     alias wb='python /Users/abhijayrajvansh/Desktop/development/projects/Launch-Websites/wb.py'
     alias url-remaker='cd /Users/abhijayrajvansh/Personal-Stuff/url-remaker'
+    alias rajvansh-os='cd /Users/abhijayrajvansh/Desktop/development/projects/Rajvansh-os'
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  SRM - Elab   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -434,6 +435,7 @@ if status is-interactive
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
     alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'
+    alias localio='prg local.in local.out'
 
     function push-library
         contest-library

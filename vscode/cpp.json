@@ -88,6 +88,7 @@
 		  "typedef unsigned long long ull;",
 		  "#define int long long",
 		  "#define TESTCASES_AND_TIME int TEST_CASES = 1; if (TT) { cin >> TEST_CASES; } for(int i = 1; i <= TEST_CASES; i++) { run_case(i); } cerr<<fixed<<setprecision(2); cerr << \"\\nExecution Time: \" << (float)clock() / CLOCKS_PER_SEC << \" secs\" << '\\n';",
+		  "#define local_io freopen(\"local.in\", \"r\", stdin); freopen(\"local.out\", \"w\", stdout);",
 		  "#define yes cout << \"YES\" << nl;",
 		  "#define no cout << \"NO\" << nl;",
 		  "#define nl '\\n';",
@@ -122,6 +123,7 @@
 		  "#ifdef ABHIJAY_DEBUG",
 		  "    cin.tie(NULL);",
 		  "#else",
+		  "    // local_io;"
 		  "    freopen(\"debug_error.txt\", \"w\", stderr);",
 		  "#endif",
 		  "    TESTCASES_AND_TIME;",

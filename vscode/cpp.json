@@ -71,8 +71,9 @@
 		  "",
 		],
 		"description": "ABHIJAY_ULTIMATE_DEBUGGER"
-	  }
-	  "CP TEMPLATE": {
+	}
+
+	"CP_TEMPLATE": {
 		"prefix": "abhijay",
 		"body": [
 		  "/*    यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥",
@@ -86,8 +87,10 @@
 		  "typedef long double ld;",
 		  "typedef unsigned long long ull;",
 		  "#define int long long",
+		  "#define TESTCASES_AND_TIME int TEST_CASES = 1; if (TT) { cin >> TEST_CASES; } for(int i = 1; i <= TEST_CASES; i++) { run_case(i); } cerr<<fixed<<setprecision(2); cerr << \"\\nExecution Time: \" << (float)clock() / CLOCKS_PER_SEC << \" secs\" << '\\n';",
 		  "#define yes cout << \"YES\" << nl;",
 		  "#define no cout << \"NO\" << nl;",
+		  "#define nl '\\n';",
 		  "",
 		  "template<class Fun> class y_combinator_result {",
 		  "    Fun fun_;",
@@ -108,7 +111,7 @@
 		  "#define deb(...)",
 		  "#endif",
 		  "",
-		  "constexpr char nl = '\\n';",
+		  "bool TT = true;",
 		  "",
 		  "void run_case(int tc){",
 		  "    ",
@@ -121,19 +124,12 @@
 		  "#else",
 		  "    freopen(\"debug_error.txt\", \"w\", stderr);",
 		  "#endif",
-		  "",
-		  "    int TEST_CASES = 1; cin >> TEST_CASES;",
-		  "",
-		  "    for(int i = 1; i <= TEST_CASES; i++){",
-		  "        // cerr << \"Case #\" << i << \": \";",
-		  "        run_case(i);",
-		  "    }",
-		  "    cerr<<fixed<<setprecision(2); cerr << \"\\nExecution Time: \" << (float)clock() / CLOCKS_PER_SEC << \" secs\" << '\\n';",
-		  "}"
-		  "",
+		  "    TESTCASES_AND_TIME;",
+		  "}",
+		  ""
 		],
-		"description": "CP TEMPLATE"
-	  }
+		"description": "CP_TEMPLATE"
+	}
 
 	//   COMPETITIVE PROGRAMMING - > Snippets
 	

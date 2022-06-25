@@ -189,13 +189,11 @@
 		"body": [
 		  "",
 		  "int gcd(int a, int b){",
-		  "",
 		  "    if(b == 0) {",
 		  "        return a;",
 		  "    }",
 		  "",
 		  "    return gcd(b, a % b);",
-		  "",
 		  "}",
 		  ""
 		],
@@ -281,38 +279,28 @@
 		  ""
 		],
 		"description": "count total digits in integer"
-	  }
+	}
 
-	  "Prefix Sum and Suffix Sum": {
+	"prefix sum and suffix sum": {
 		"prefix": "include-prefixsum-suffixsum",
 		"body": [
 		  "",
-		  "vector<int> prefixSum(vector<int> &a){",
-		  "    int n = a.size();",
-		  "    vector<int> prefix(n);",
-		  "",
+		  "void prefixSum_suffixSum(int a[], int prefix[], int suffix[], int n){",
 		  "    prefix[0] = a[0];",
-		  "    ",
+		  "",
 		  "    for(int i = 1; i < n; i++){",
-		  "        prefix[i] += prefix[i - 1] + a[i];",
+		  "        prefix[i] += prefix[i - 1] , a[i];",
 		  "    }",
-		  "",
-		  "    return prefix;",
-		  "}",
-		  "",
-		  "vector<int> suffixSum(vector<int> &a){",
-		  "    int n = a.size();",
-		  "    vector<int> suffix(n);",
 		  "",
 		  "    suffix[n - 1] = a[n - 1];",
 		  "",
 		  "    for(int i = n - 2; i >= 0; i--){",
-		  "        suffix[i] += suffix[i + 1] + a[i];",
+		  "        suffix[i] += suffix[i + 1], a[i];",
 		  "    }",
-		  "    return suffix;",
 		  "}",
 		  ""
 		],
-		"description": "Prefix Sum and Suffix Sum"
-	  }
+		"description": "prefix sum and suffix sum"
+	}
+
 }

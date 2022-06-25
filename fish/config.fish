@@ -77,6 +77,14 @@ if status is-interactive
         cd $argv && cd A
     end
 
+    function upsolve
+        # Directory location of Codeforces Bot
+        /Users/abhijayrajvansh/Desktop/development/projects/Codeforces-Contest-Bot && python3 upsolver.py $argv
+        # After running bot and downloading TC
+        cf
+        cd UPSOLVE 
+    end 
+
     # CommandLine Debug during contests:- Compile, Debug && Timed: C++
     function cpp # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "Compiling" $argv" with G++17..."
@@ -95,7 +103,51 @@ if status is-interactive
         ./a.out
     end
 
-    
+    function runall # runnig  and testing sample testcases
+        echo "Compiling main.cpp with G++17..."
+        sleep 1
+        # Compiling file
+        g++ -std=c++17 main.cpp -o main.out
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        # Running testcases:
+        if test -f sample_input_1.txt;
+            ./main.out <sample_input_1.txt> my_output_1.txt
+            if cmp -s sample_output_1.txt my_output_1.txt;
+                echo Running Testcase 1:(set_color --bold green) 'Passed!' (set_color normal)
+            else
+                echo Running Testcase 1:(set_color --bold red) 'Failed' (set_color normal)                
+                echo "Expected                              My Output"
+                echo "``````````                           ````````````"
+                diff -y -W 70 sample_output_1.txt my_output_1.txt
+                echo ""                
+            end
+        end
+        if test -f sample_input_2.txt;
+            ./main.out <sample_input_2.txt> my_output_2.txt
+            if cmp -s sample_output_2.txt my_output_2.txt;
+                echo Running Testcase 2:(set_color --bold green) 'Passed!' (set_color normal)
+            else
+                echo Running Testcase 2:(set_color --bold red) 'Failed' (set_color normal)                
+                echo "Expected                               My Output"
+                echo "``````````                            ````````````"
+                diff -y -W 70 sample_output_2.txt my_output_2.txt
+                echo ""                
+            end
+        end
+        if test -f sample_input_3.txt;
+            ./main.out <sample_input_3.txt> my_output_3.txt
+            if cmp -s sample_output_3.txt my_output_3.txt;
+                echo Running Testcase 3:(set_color --bold green) 'Passed!' (set_color normal)
+            else
+                echo Running Testcase 3:(set_color --bold red) 'Failed' (set_color normal)                
+                echo "Expected                               My Output"
+                echo "``````````                            ````````````"
+                diff -y -W 70 sample_output_3.txt my_output_3.txt
+                echo ""                
+            end
+        end
+    end
+
     #for problemset A, B, C ...
     function runsamples # runnig and testing sample testcases
         echo "Compiling $argv.cpp with G++17..." \n

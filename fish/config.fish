@@ -58,7 +58,8 @@ if status is-interactive
         
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Codeforces   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    alias codeforces-login='cd /Users/abhijayrajvansh/Personal-Softwares/codeforces-login-bot && app'
+    alias codeforces='cd /Users/abhijayrajvansh/Desktop/codeforces'
+    alias cf='codeforces'
 
     function 1000
         main
@@ -68,18 +69,12 @@ if status is-interactive
     
     
     #Codeforces Contest Bot
-    function cf_contest_bot
+    function cf_sample_gen
         # Directory location of Codeforces Bot
-        /Users/abhijayrajvansh/Desktop/development/projects/Codeforces-Contest-Bot && python main.py $argv
+        /Users/abhijayrajvansh/Desktop/development/projects/Codeforces-Contest-Bot && python3 app.py $argv
         # After running bot and downloading TC
         codeforces
         cd $argv && cd A
-    end
-    function cf-upsolver
-        #directory of upsolver bot
-        /Users/abhijayrajvansh/Desktop/development/projects/Codeforces-Contest-Bot && python cf-upsolver.py $argv
-        #after running bot and downloading testcases
-        cd /Users/abhijayrajvansh/desktop/codeforces/UPSOLVE-1000/
     end
 
     # CommandLine Debug during contests:- Compile, Debug && Timed: C++
@@ -207,7 +202,7 @@ if status is-interactive
     end
     #for problemset
     function runsamples # runnig and testing sample testcases
-        echo "Compiling main.cpp with G++17..." \n
+        echo "Compiling $argv.cpp with G++17..." \n
         sleep 1
         #navigating to problem dir:
         cd ..

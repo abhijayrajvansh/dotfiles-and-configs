@@ -78,7 +78,6 @@ if status is-interactive
     end
 
     # CommandLine Debug during contests:- Compile, Debug && Timed: C++
-
     function cpp # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "Compiling" $argv" with G++17..."
         echo
@@ -90,117 +89,14 @@ if status is-interactive
     function deb # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "[ABHIJAY_DEBUG MODE] Compiling" $argv.cpp" with G++17..."
         echo "---------INPUT--------"
-        if test -f sample_input_1.txt;
-            echo "Sample testcase 1:"
-            cat sample_input_1.txt
-            echo "``````````````````````````````````````````````````````"
-            sleep 1
-            g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
-            echo "--------OUTPUT--------"
-            ./a.out
-        else
-            sleep 1
-            g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
-            echo "--------OUTPUT--------"
-            ./a.out
-        end
-    end
-
-
-    function run # ABHIJAY_DEBUG FILE_NAME.cpp
-        echo "Compiling" main.cpp" with G++17..."
-        g++ -std=c++17 main.cpp -o a.out
         sleep 1
-        if test -f sample_input_$argv.txt;
-            ./a.out <sample_input_$argv.txt> my_output_$argv.txt
-            if cmp -s sample_output_$argv.txt my_output_$argv.txt;
-                echo Running Testcase $argv:(set_color --bold green) 'Passed!' 
-                echo " Expected                                My Output"
-                echo "```````````                             ````````````"
-                diff -y -W 70 sample_output_$argv.txt my_output_$argv.txt
-            else
-                echo Running Testcase $argv:(set_color --bold red) 'Failed' 
-                echo " Expected                                My Output"
-                echo "```````````                             ````````````"
-                diff -y -W 70 sample_output_$argv.txt my_output_$argv.txt
-            end
-        end
+        g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
+        echo "--------OUTPUT--------"
+        ./a.out
     end
 
-    # for single problem
-    function runtestcases # runnig  and testing sample testcases
-        echo "Compiling main.cpp with G++17..."
-        echo 
-        sleep 1
-        # Compiling file
-        g++ -std=c++17 main.cpp -o main.out
-        # Running testcases:
-        if test -f sample_input_1.txt;
-            ./main.out <sample_input_1.txt> my_output_1.txt
-            if cmp -s sample_output_1.txt my_output_1.txt;
-                echo Running Testcase 1:(set_color --bold green) 'Passed!' (set_color normal)
-                echo "Expected                              My Output"
-                echo "``````````                           ````````````"
-                diff -y -W 70 sample_output_1.txt my_output_1.txt
-                echo (set_color normal)
-            else
-                echo Running Testcase 1:(set_color --bold red) 'Failed' (set_color normal)                
-                echo "Expected                              My Output"
-                echo "``````````                           ````````````"
-                diff -y -W 70 sample_output_1.txt my_output_1.txt
-                echo ""                
-            end
-        end
-        if test -f sample_input_2.txt;
-            ./main.out <sample_input_2.txt> my_output_2.txt
-            if cmp -s sample_output_2.txt my_output_2.txt;
-                echo Running Testcase 2:(set_color --bold green) 'Passed!' (set_color normal)
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_2.txt my_output_2.txt
-                echo (set_color normal)
-            else
-                echo Running Testcase 2:(set_color --bold red) 'Failed' (set_color normal)                
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_2.txt my_output_2.txt
-                echo ""                
-            end
-        end
-        if test -f sample_input_3.txt;
-            ./main.out <sample_input_3.txt> my_output_3.txt
-            if cmp -s sample_output_3.txt my_output_3.txt;
-                echo Running Testcase 3:(set_color --bold green) 'Passed!' (set_color normal)
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_3.txt my_output_3.txt
-                echo (set_color normal)
-            else
-                echo Running Testcase 3:(set_color --bold red) 'Failed' (set_color normal)                
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_3.txt my_output_3.txt
-                echo ""                
-            end
-        end
-        if test -f sample_input_4.txt;
-            ./main.out <sample_input_4.txt> my_output_4.txt
-            if cmp -s sample_output_4.txt my_output_4.txt;
-                echo Running Testcase 4:(set_color --bold green) 'Passed!' (set_color normal)
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_4.txt my_output_4.txt
-                echo (set_color normal)
-            else
-                echo Running Testcase 4:(set_color --bold red) 'Failed' (set_color normal)                
-                echo "Expected                               My Output"
-                echo "``````````                            ````````````"
-                diff -y -W 70 sample_output_4.txt my_output_4.txt
-                echo ""                
-            end
-        end
-    end
-    #for problemset
+    
+    #for problemset A, B, C ...
     function runsamples # runnig and testing sample testcases
         echo "Compiling $argv.cpp with G++17..." \n
         sleep 1

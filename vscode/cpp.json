@@ -119,9 +119,8 @@
 		  "",
 		  "int32_t main() {",
 		  "    ios_base::sync_with_stdio(false);",
-		  "#ifdef ABHIJAY_DEBUG",
 		  "    cin.tie(NULL);",
-		  "#else",
+		  "#ifndef ABHIJAY_DEBUG",
 		  "    DEBUG_AND_LOCAL_IO;",
 		  "#endif",
 		  "    TESTCASES_AND_TIME;",
@@ -130,8 +129,6 @@
 		  "",
 		  "",
 		  "",
-		  "",
-		  ""
 		],
 		"description": "CP_TEMPLATE"
 	}
@@ -184,8 +181,8 @@
 
 	//////////////////////////////////////////////////////////////////  CODE - Mathematical functions  ///////////////////////////////////////////////////////////////
 
-	"greatest comman divisors": {
-		"prefix": "include-gcd",
+	"GCD and LCM": {
+		"prefix": "include-gcd-lcm",
 		"body": [
 		  "",
 		  "int gcd(int a, int b){",
@@ -195,9 +192,15 @@
 		  "",
 		  "    return gcd(b, a % b);",
 		  "}",
+		  "",
+		  "int lcm(int a, int b){",
+		  "    int hcf = gcd(a, b);",
+		  "",
+		  "    return (a / hcf) * (b / hcf) * hcf;",
+		  "}",
 		  ""
 		],
-		"description": "greatest comman divisors"
+		"description": "GCD and LCM"
 	}
 
 
@@ -289,13 +292,13 @@
 		  "    prefix[0] = a[0];",
 		  "",
 		  "    for(int i = 1; i < n; i++){",
-		  "        prefix[i] += prefix[i - 1] , a[i];",
+		  "        prefix[i] += prefix[i - 1] + a[i];",
 		  "    }",
 		  "",
 		  "    suffix[n - 1] = a[n - 1];",
 		  "",
 		  "    for(int i = n - 2; i >= 0; i--){",
-		  "        suffix[i] += suffix[i + 1], a[i];",
+		  "        suffix[i] += suffix[i + 1] + a[i];",
 		  "    }",
 		  "}",
 		  ""

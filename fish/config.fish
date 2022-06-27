@@ -115,6 +115,7 @@ if status is-interactive
         echo "---------INPUT--------"
         sleep 1
         g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
+        echo ""
         echo "--------OUTPUT--------"
         ./a.out
     end

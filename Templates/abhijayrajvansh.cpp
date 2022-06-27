@@ -1,7 +1,7 @@
 /*    यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *    author:   abhijayrajvansh (https://codeforces.com/profile/abhijayrajvansh)
- *    created:  24.06.2022 18:32:52
+ *    created:  26.06.2022 17:48:34
 **/
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,8 +9,8 @@ using namespace std;
 typedef long double ld;
 typedef unsigned long long ull;
 #define int long long
-#define TESTCASES_AND_TIME int TEST_CASES = 1; if (TT) { cin >> TEST_CASES; } for(int i = 1; i <= TEST_CASES; i++) { run_case(i); } cerr<<fixed<<setprecision(2); cerr << "\nExecution Time: " << (float)clock() / CLOCKS_PER_SEC << " secs" << '\n';
-#define local_io freopen("local.in", "r", stdin); freopen("local.out", "w", stdout);
+#define TESTCASES_AND_TIME int TEST_CASES = 1; if (TT) { cin >> TEST_CASES; } for (int i = 1; i <= TEST_CASES; i++) { if (print_case_no) cout << "case #" << i << ": "; run_case(i); } cerr << fixed << setprecision(2); cerr << "\nExecution Time: " << (float)clock() / CLOCKS_PER_SEC << " secs" << '\n'; 
+#define DEBUG_AND_LOCAL_IO freopen("debug_error.txt", "w", stderr); if(local_IO) { freopen("local.in", "r", stdin); freopen("local.out", "w", stdout); }
 #define yes cout << "YES" << nl;
 #define no cout << "NO" << nl;
 #define nl '\n';
@@ -34,7 +34,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 #define deb(...)
 #endif
 
-bool TT = true;
+bool local_IO = false, print_case_no = false, TT = true;
 
 void run_case(int tc){
     
@@ -42,11 +42,12 @@ void run_case(int tc){
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
-#ifdef ABHIJAY_DEBUG
     cin.tie(NULL);
-#else
-    // local_io;
-    freopen("debug_error.txt", "w", stderr);
+#ifndef ABHIJAY_DEBUG
+    DEBUG_AND_LOCAL_IO;
 #endif
     TESTCASES_AND_TIME;
 }
+
+
+

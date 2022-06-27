@@ -61,6 +61,22 @@ if status is-interactive
     alias codeforces='cd /Users/abhijayrajvansh/Desktop/codeforces'
     alias cf='codeforces'
 
+    
+    
+    
+    
+    
+    
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Codechef   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+    alias codechef='cd /Users/abhijayrajvansh/Desktop/codechef'
+
+
+
+
+
+
     function 1000
         main
         cd /Users/abhijayrajvansh/Personal-Softwares/C2-Ladders-CFLogin-Bot

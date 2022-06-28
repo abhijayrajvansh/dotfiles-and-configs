@@ -38,7 +38,7 @@
 		  "",
 		  "int main (){",
 		  "    ios_base::sync_with_stdio(false);",
-		  "    cin.tie(NULL);",
+		  "    cin.tie(nullptr);",
 		  "    $0",
 		  "    return 0;    ",
 		  "}",
@@ -212,7 +212,7 @@
 		  "int32_t main() {",
 		  "    ios_base::sync_with_stdio(false);",
 		  "#ifndef ABHIJAY_DEBUG",
-		  "    cin.tie(NULL);",
+		  "    cin.tie(nullptr);",
 		  "    freopen(\"debug.err\", \"w\", stderr);",
 		  "#endif",
 		  "",
@@ -262,16 +262,16 @@
 		"description": "integer vector"
 	}
 
-	"input vector using loop": {
-		"prefix": "read-vector",
+	"read stl": {
+		"prefix": "readvector-stl",
 		"body": [
 		  "",
-		  "for (int i = 0; i < (int)$0.size(); i++) {",
-		  "	cin >> $0[i];",
+		  "for (auto &each : $0){",
+		  "    cin >> each;",
 		  "}",
-		  "	"
+		  ""
 		],
-		"description": "input vector using loop"
+		"description": "read stl"
 	}
 
 	"printing vector using loop": {
@@ -315,6 +315,16 @@
 
 
 	//////////////////////////////////////////////////////////////////  CODE - Snippets and Fucntions  ///////////////////////////////////////////////////////////////
+
+	"print answer with case no.": {
+		"prefix": "print-case#",
+		"body": [
+		  "cout << \"Case #\" << tc << \": \"; ",
+		  "",
+		  "$0"
+		],
+		"description": "print answer with case no."
+	}
 
 	"integer to vector convertion": {
 		"prefix": "include-integer-to-vector",
@@ -365,9 +375,11 @@
 		  "template <class T>",
 		  "void output_vector(vector<T>& arr){",
 		  "    int n = arr.size();",
-		  "    for(int i = 0; i < n; i++){",
+		  "",
+		  "    for (int i = 0; i < n; i++) {",
 		  "        cout << arr[i] << \" \";",
 		  "    }",
+		  "",
 		  "    cout << nl;",
 		  "}",
 		  ""

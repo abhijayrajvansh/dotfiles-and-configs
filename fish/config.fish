@@ -112,11 +112,10 @@ if status is-interactive
 
     function deb # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "[ABHIJAY_DEBUG MODE] Compiling" $argv.cpp" with G++17..."
-        echo "---------INPUT--------"
         sleep 1
         g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
+        # g++ -std=c++17 -O2 -DABHIJAY_DEBUG -Wshadow -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -fsanitize=address -fsanitize=undefined $argv.cpp -o a.out
         echo ""
-        echo "--------OUTPUT--------"
         ./a.out
     end
 

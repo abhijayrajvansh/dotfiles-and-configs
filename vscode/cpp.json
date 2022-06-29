@@ -215,12 +215,8 @@
 		  "    cin.tie(nullptr);",
 		  "    freopen(\"debug.err\", \"w\", stderr);",
 		  "#endif",
-		  "",
 		  "    tatakae();",
 		  "}",
-		  "",
-		  "",
-		  ""
 		],
 		"description": "CP_TEMPLATE"
 	}
@@ -230,7 +226,7 @@
 	// Some quick printing...
 
 	"print YES ": {
-		"prefix": "yes",
+		"prefix": "yes;",
 		"body": [
 		  "cout << \"YES\" << nl;"
 		],
@@ -238,7 +234,7 @@
 	}
 
 	"print NO ": {
-		"prefix": "no",
+		"prefix": "no;",
 		"body": [
 		  "cout << \"NO\" << nl;"
 		],
@@ -246,6 +242,17 @@
 	}
 
 	// STL Worl flow
+
+	"iterative traversal": {
+		"prefix": "trav",
+		"body": [
+		  "for (auto &each : $1){",
+		  "    $0",
+		  "}"
+		],
+		"description": "iterative traversal"
+	}
+
 	"Begin -> End all Itetrations": {
 		"prefix": "all",
 		"body": [
@@ -367,6 +374,30 @@
 		],
 		"description": "distinct elements in vector"
 	}
+
+	"Boolean values to check vowel or consonants": {
+		"prefix": "include-isvowel-isconsonant",
+		"body": [
+		  "",
+		  "bool isVowel(char c){",
+		  "    if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||",
+		  "       c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){",
+		  "",
+		  "        return true;",
+		  "    }",
+		  "",
+		  "    return false;",
+		  "}",
+		  "",
+		  "bool isConsonant(char c){",
+		  "    return (isVowel(c) ? false : true);",
+		  "}",
+		  ""
+		],
+		"description": "Boolean values to check vowel or consonants"
+	  }
+
+	  
 
 	"printing vector": {
 		"prefix": "include-output-vector",

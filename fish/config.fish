@@ -104,19 +104,16 @@ if status is-interactive
     # CommandLine Debug during contests:- Compile, Debug && Timed: C++
     function cpp # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "Compiling" $argv" with G++17..."
-        echo
         sleep 1
-        g++ -std=c++17 $argv -o a.out
-        ./a.out
+        g++ -std=c++17 $argv -o a.out && ./a.out
     end
 
     function deb # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "[ABHIJAY_DEBUG MODE] Compiling" $argv.cpp" with G++17..."
         sleep 1
-        g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp -o a.out
+        # g++ -DABHIJAY_DEBUG main.cpp && ./a.out
+        g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp && ./a.out
         # g++ -std=c++17 -O2 -DABHIJAY_DEBUG -Wshadow -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -fsanitize=address -fsanitize=undefined $argv.cpp -o a.out
-        echo ""
-        ./a.out
     end
 
     function runall # runnig  and testing sample testcases

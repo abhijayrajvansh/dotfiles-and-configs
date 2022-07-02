@@ -226,7 +226,7 @@
 	// Some quick printing...
 
 	"print YES ": {
-		"prefix": "yes;",
+		"prefix": "pyes;",
 		"body": [
 		  "cout << \"YES\" << nl;"
 		],
@@ -234,11 +234,21 @@
 	}
 
 	"print NO ": {
-		"prefix": "no;",
+		"prefix": "pno;",
 		"body": [
 		  "cout << \"NO\" << nl;"
 		],
 		"description": "print NO "  
+	}
+
+	"print answer with case no.": {
+		"prefix": "print-case#",
+		"body": [
+		  "cout << \"Case #\" << tc << \": \"; ",
+		  "",
+		  "$0"
+		],
+		"description": "print answer with case no."
 	}
 
 	// STL Worl flow
@@ -246,7 +256,7 @@
 	"iterative traversal": {
 		"prefix": "trav",
 		"body": [
-		  "for (auto &each : $1){",
+		  "for (auto &a : $1){",
 		  "    $0",
 		  "}"
 		],
@@ -323,14 +333,38 @@
 
 	//////////////////////////////////////////////////////////////////  CODE - Snippets and Fucntions  ///////////////////////////////////////////////////////////////
 
-	"print answer with case no.": {
-		"prefix": "print-case#",
+	"Rotating string by element from 1.->n-1 or from n-1.->1": {
+		"prefix": "rotate-string-left-right",
 		"body": [
-		  "cout << \"Case #\" << tc << \": \"; ",
 		  "",
-		  "$0"
+		  "void rotateRight(string &s, int k){",
+		  "    int n = s.size();",
+		  "",
+		  "    for(int time = 0; time < k; time++){",
+		  "        string newly = \"\";",
+		  "        for(int i = 1; i < n; i++){",
+		  "            newly += s[i];",
+		  "        }",
+		  "        newly += s[0];",
+		  "        s = newly;",
+		  "    }",
+		  "}",
+		  "",
+		  "void rotateLeft(string &s, int k){",
+		  "    int n = s.size();",
+		  "",
+		  "    for(int time = 0; time < k; time++){",
+		  "        string newly = \"X\";",
+		  "        newly[0] = s[n - 1];",
+		  "        for(int i = 0; i < n - 1; i++){",
+		  "            newly += s[i];",
+		  "        }",
+		  "        s = newly;",
+		  "    }",
+		  "}",
+		  ""
 		],
-		"description": "print answer with case no."
+		"description": "Rotating string by element from 1.->n-1 or from n-1.->1"
 	}
 
 	"integer to vector convertion": {

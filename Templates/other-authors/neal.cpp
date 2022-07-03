@@ -40,6 +40,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 
 void run_case() {
+    // TODO: make sure all variables get reset.
     
 }
 

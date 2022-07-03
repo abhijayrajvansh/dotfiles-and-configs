@@ -1,7 +1,7 @@
 /*    यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *    author:   abhijayrajvansh
- *    created:  28.06.2022 03:31:47
+ *    created:  03.07.2022 16:57:04
 **/
 #include <bits/stdc++.h>
 using namespace std;
@@ -75,11 +75,8 @@ void run_case(int tc){
 int32_t main() {
     ios_base::sync_with_stdio(false);
 #ifndef ABHIJAY_DEBUG
-    cin.tie(NULL);
+    cin.tie(nullptr);
     freopen("debug.err", "w", stderr);
 #endif
-
     tatakae();
 }
-
-

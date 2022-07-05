@@ -101,6 +101,8 @@ if status is-interactive
         cd UPSOLVE 
     end 
 
+    alias up='upsolve'
+
     # CommandLine Debug during contests:- Compile, Debug && Timed: C++
     function cpp # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "Compiling" $argv" with G++17..."

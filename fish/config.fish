@@ -117,7 +117,7 @@ if status is-interactive
     end
 
     function runall # runnig  and testing sample testcases
-        echo "Compiling main.cpp with G++17..."
+        echo "Compiling main.cpp with G++17..."\n
         sleep 1
         # Compiling file
         g++ -std=c++17 main.cpp -o main.out
@@ -126,9 +126,13 @@ if status is-interactive
         if test -f sample_input_1.txt;
             ./main.out <sample_input_1.txt> my_output_1.txt
             if cmp -s sample_output_1.txt my_output_1.txt;
-                echo Running Testcase 1:(set_color --bold green) 'Passed!' (set_color normal)
+                echo Running Testcase 1:(set_color --bold green) 'Passed!'
+                echo "Expected                              My Output"
+                echo "``````````                           ````````````"
+                diff -y -W 70 sample_output_1.txt my_output_1.txt
+                echo ""
             else
-                echo Running Testcase 1:(set_color --bold red) 'Failed' (set_color normal)                
+                echo Running Testcase 1:(set_color --bold red) 'Failed'                
                 echo "Expected                              My Output"
                 echo "``````````                           ````````````"
                 diff -y -W 70 sample_output_1.txt my_output_1.txt
@@ -138,9 +142,13 @@ if status is-interactive
         if test -f sample_input_2.txt;
             ./main.out <sample_input_2.txt> my_output_2.txt
             if cmp -s sample_output_2.txt my_output_2.txt;
-                echo Running Testcase 2:(set_color --bold green) 'Passed!' (set_color normal)
+                echo Running Testcase 2:(set_color --bold green) 'Passed!'
+                echo "Expected                               My Output"
+                echo "``````````                            ````````````"
+                diff -y -W 70 sample_output_2.txt my_output_2.txt
+                echo "" 
             else
-                echo Running Testcase 2:(set_color --bold red) 'Failed' (set_color normal)                
+                echo Running Testcase 2:(set_color --bold red) 'Failed'                
                 echo "Expected                               My Output"
                 echo "``````````                            ````````````"
                 diff -y -W 70 sample_output_2.txt my_output_2.txt
@@ -150,9 +158,13 @@ if status is-interactive
         if test -f sample_input_3.txt;
             ./main.out <sample_input_3.txt> my_output_3.txt
             if cmp -s sample_output_3.txt my_output_3.txt;
-                echo Running Testcase 3:(set_color --bold green) 'Passed!' (set_color normal)
+                echo Running Testcase 3:(set_color --bold green) 'Passed!'
+                echo "Expected                               My Output"
+                echo "``````````                            ````````````"
+                diff -y -W 70 sample_output_3.txt my_output_3.txt
+                echo ""  
             else
-                echo Running Testcase 3:(set_color --bold red) 'Failed' (set_color normal)                
+                echo Running Testcase 3:(set_color --bold red) 'Failed'                
                 echo "Expected                               My Output"
                 echo "``````````                            ````````````"
                 diff -y -W 70 sample_output_3.txt my_output_3.txt
@@ -489,16 +501,3 @@ end
     #     cd $argv
     #     code-E
     # end
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Python Environment  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    alias data-science='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics/Advanced-Programming-Practice'
-    alias python_techniques='cd /Users/abhijayrajvansh/Desktop/programming-languages/python/Python-Techniques'
-    alias notebook='/Users/abhijayrajvansh/opt/anaconda3/bin/jupyter_mac.command ; exit;'
-
-
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    # eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-    # <<< conda initialize <<<
-    # conda deactivate

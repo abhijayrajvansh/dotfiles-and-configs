@@ -204,7 +204,6 @@
 		  "",
 		  "bool TT = true;",
 		  "",
-		  "",
 		  "void run_case(int tc){",
 		  "    // TODO: make sure all variables get reset.",
 		  "}",
@@ -286,7 +285,7 @@
 	"integer vector": {
 		"prefix": "vecint",
 		"body": [
-		  "vector<int> $0"
+		  "vector<int64_t> $0"
 		],
 		"description": "integer vector"
 	}

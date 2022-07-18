@@ -78,9 +78,14 @@ if status is-interactive
 
     alias codechef='cd /Users/abhijayrajvansh/Desktop/codechef'
 
-
-
-
+    #Codechef Contest Bot
+    function cc_sample_gen
+        # Directory location of Codechef Bot
+        /Users/abhijayrajvansh/Desktop/development/projects/Codechef-Contest-Bot && python3 app.py $argv
+        # After running bot and downloading testcases
+        codechef
+        cd $argv
+    end
 
 
     function 1000

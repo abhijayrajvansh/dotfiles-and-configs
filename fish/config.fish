@@ -45,6 +45,12 @@ if status is-interactive
     alias wb='python /Users/abhijayrajvansh/Desktop/development/projects/Launch-Websites/wb.py'
     alias url-remaker='cd /Users/abhijayrajvansh/Personal-Stuff/url-remaker'
     alias rajvansh-os='cd /Users/abhijayrajvansh/Desktop/development/projects/Rajvansh-os'
+    
+    function naruto  
+        cd "/Users/abhijayrajvansh/Desktop/development/projects/Naruto-Bot" 
+        app $argv
+    end
+
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  SRM - Elab   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

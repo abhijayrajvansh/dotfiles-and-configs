@@ -265,6 +265,18 @@
 		"description": "N size Vector Input"
 	}
 
+	"N Size String input": {
+		"prefix": "nstr",
+		"body": [
+		  "int n;",
+		  "cin >> n;",
+		  "    ",
+		  "string s;",
+		  "cin >> s;"
+		],
+		"description": "N Size String input"
+	}
+
 	// STL and Worlflow
 
 	"For Loop For Repetition": {

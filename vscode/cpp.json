@@ -250,6 +250,21 @@
 		"description": "print answer with case no."
 	}
 
+	"N size Vector Input": {
+		"prefix": "nvec",
+		"body": [
+		  "int n;",
+		  "cin >> n;",
+		  "",
+		  "vector<int64_t> a(n);",
+		  "    ",
+		  "for (auto &each : a){",
+		  "    cin >> each;",
+		  "}"
+		],
+		"description": "N size Vector Input"
+	}
+
 	// STL and Worlflow
 
 	"For Loop For Repetition": {

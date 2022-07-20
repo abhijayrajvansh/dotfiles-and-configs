@@ -186,12 +186,12 @@ if status is-interactive
         end
     end
 
-    #for problemset A, B, C ...
+    #for problemset A, B, C ... && Codechef codes for problems
     function runsamples # runnig and testing sample testcases
         echo "Compiling $argv.cpp with G++17..." \n
         sleep 1
         #navigating to problem dir:
-        cd ..
+        # cd ..
         cd $argv
         # Compiling file
         g++ -std=c++17 $argv.cpp -o $argv.out
@@ -260,6 +260,8 @@ if status is-interactive
                 echo ""
             end
         end
+
+        cd ..
     end
 
     function checkfile 

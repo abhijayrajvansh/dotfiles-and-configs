@@ -258,21 +258,19 @@
 		  "",
 		  "vector<int64_t> a(n);",
 		  "    ",
-		  "for (auto &each : a){",
-		  "    cin >> each;",
+		  "for (int i = 0; i < n; i++) {",
+		  "    cin >> a[i];",
 		  "}"
 		],
 		"description": "N size Vector Input"
 	}
 
 	"N Size String input": {
-		"prefix": "nstr",
+		"prefix": "nstring",
 		"body": [
-		  "int n;",
-		  "cin >> n;",
-		  "    ",
-		  "string s;",
-		  "cin >> s;"
+		  "int n; string s;",
+		  "cin >> n >> s;",
+		  "",
 		],
 		"description": "N Size String input"
 	}
@@ -321,8 +319,8 @@
 		"prefix": "readvector-stl",
 		"body": [
 		  "",
-		  "for (auto &each : $0){",
-		  "    cin >> each;",
+		  "for (int i = 0; i < n; i++) {",
+		  "    cin >> $0[i];",
 		  "}",
 		  ""
 		],
@@ -424,6 +422,28 @@
 		  ""
 		],
 		"description": "integer to vector convertion"
+	}
+
+
+	"to check if string is palindrome or not": {
+		"prefix": "include-isPalindrome",
+		"body": [
+		  "bool isPalindrome(string &s){",
+		  "    int i = 0, j = s.size() - 1;",
+		  "    while(i < j){",
+		  "        if(s[i] == s[j]){",
+		  "            i++;",
+		  "            j--;",
+		  "        }",
+		  "        else{",
+		  "            return false;",
+		  "        }",
+		  "    }",
+		  "    return true;",
+		  "}",
+		  ""
+		],
+		"description": "to check if string is palindrome or not"
 	}
 
 	"distinct elements in vector": {

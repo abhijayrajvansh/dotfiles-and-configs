@@ -143,6 +143,8 @@
 		  "",
 		  "constexpr char nl = '\\n'; ",
 		  "",
+		  "bool TT = true;",
+		  "",
 		  "void run_case(int tc){",
 		  "    // TODO: make sure all variables get reset.$0",
 		  "}",

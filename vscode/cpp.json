@@ -47,44 +47,42 @@
 		"description": "cpp basic"
 	}
 	
-	"rajvansh debugger": {
+	"ABHIJAY_DEBUG": {
 		"prefix": "debugger",
 		"body": [
 		  "",
 		  "template<class Fun> class rajvansh",
+		  "/*    यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥",
+		  "    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ",
+		  "*/",
 		  "{",
-		  "    Fun fun_;",
+		  "Fun fun_;",
 		  "public:",
 		  "    template<class T> ",
 		  "    explicit rajvansh(T &&fun): ",
 		  "    fun_(std::forward<T>(fun)) {}",
-		  "",
 		  "    template<class ...Args> ",
-		  "    decltype(auto) operator()(Args &&...args) ",
-		  "    { ",
+		  "    decltype(auto) operator()(Args &&...args) { ",
+		  "",
 		  "        return fun_(std::ref(*this), std::forward<Args>(args)...); ",
 		  "    }",
 		  "};",
-		  "",
 		  "template<class Fun> ",
-		  "decltype(auto) y_combinator(Fun &&fun) ",
-		  "{ ",
+		  "decltype(auto) y_combinator(Fun &&fun) {",
+		  "",
 		  "    return rajvansh<std::decay_t<Fun>>(std::forward<Fun>(fun)); ",
 		  "}",
-		  "",
 		  "template<typename A, typename B> ",
-		  "ostream& operator<<(ostream &os, const pair<A, B> &p) ",
-		  "{ ",
+		  "ostream& operator<<(ostream &os, const pair<A, B> &p) {",
+		  "",
 		  "    return os << '(' << p.first << \", \" << p.second << ')'; ",
 		  "}",
-		  "",
 		  "template<typename T_container, typename T = typename enable_if<!is_same",
 		  "",
 		  "<T_container, string>::value, typename T_container::value_type>::type> ",
-		  "ostream& operator<<(ostream &os, const T_container &v) ",
-		  "{ ",
-		  "    os << '{'; string sep; ",
+		  "ostream& operator<<(ostream &os, const T_container &v) { ",
 		  "",
+		  "    os << '{'; string sep; ",
 		  "    for (const T &x : v) ",
 		  "        os << sep << x, sep = \", \"; ",
 		  "",
@@ -92,10 +90,9 @@
 		  "}",
 		  "",
 		  "void dbg_out() { cerr << endl; }",
-		  "",
 		  "template<typename Head, typename... Tail> ",
-		  "void dbg_out(Head H, Tail... T) ",
-		  "{ ",
+		  "",
+		  "void dbg_out(Head H, Tail... T) { ",
 		  "    cerr << ' ' << H; dbg_out(T...); ",
 		  "}",
 		  "",
@@ -106,7 +103,7 @@
 		  "#endif",
 		  ""
 		],
-		"description": "rajvansh debugger"
+		"description": "ABHIJAY_DEBUG"
 	}
 
 	"File Handling Debug": {
@@ -132,92 +129,34 @@
 	}
 
 
-	"CP_TEMPLATE": {
+	"CP_MINIMAL_TEMPLATE": {
 		"prefix": "abhijay",
 		"body": [
-		  "/*    यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥",
-		  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
-		  " *    author:   abhijayrajvansh",
-		  " *    created:  $CURRENT_DATE.$CURRENT_MONTH.$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+		  "/**   ",
+		  " *    author:  abhijayrajvansh",
+		  " *    created: $CURRENT_DATE.$CURRENT_MONTH.$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
 		  "**/",
 		  "#include <bits/stdc++.h>",
-		  "using namespace std;",
-		  "",
 		  "#define int int64_t",
 		  "#define tatakae() int tests = 1; if (TT) cin >> tests; for (int i = 1; i <= tests; i++) { run_case(i);} ",
+		  "using namespace std;",
 		  "",
 		  "constexpr char nl = '\\n'; ",
 		  "",
-		  "template<class Fun> class rajvansh",
-		  "{",
-		  "    Fun fun_;",
-		  "public:",
-		  "    template<class T> ",
-		  "    explicit rajvansh(T &&fun): ",
-		  "    fun_(std::forward<T>(fun)) {}",
-		  "",
-		  "    template<class ...Args> ",
-		  "    decltype(auto) operator()(Args &&...args) ",
-		  "    { ",
-		  "        return fun_(std::ref(*this), std::forward<Args>(args)...); ",
-		  "    }",
-		  "};",
-		  "",
-		  "template<class Fun> ",
-		  "decltype(auto) y_combinator(Fun &&fun) ",
-		  "{ ",
-		  "    return rajvansh<std::decay_t<Fun>>(std::forward<Fun>(fun)); ",
-		  "}",
-		  "",
-		  "template<typename A, typename B> ",
-		  "ostream& operator<<(ostream &os, const pair<A, B> &p) ",
-		  "{ ",
-		  "    return os << '(' << p.first << \", \" << p.second << ')'; ",
-		  "}",
-		  "",
-		  "template<typename T_container, typename T = typename enable_if<!is_same",
-		  "",
-		  "<T_container, string>::value, typename T_container::value_type>::type> ",
-		  "ostream& operator<<(ostream &os, const T_container &v) ",
-		  "{ ",
-		  "    os << '{'; string sep; ",
-		  "",
-		  "    for (const T &x : v) ",
-		  "        os << sep << x, sep = \", \"; ",
-		  "",
-		  "    return os << '}'; ",
-		  "}",
-		  "",
-		  "void dbg_out() { cerr << endl; }",
-		  "",
-		  "template<typename Head, typename... Tail> ",
-		  "void dbg_out(Head H, Tail... T) ",
-		  "{ ",
-		  "    cerr << ' ' << H; dbg_out(T...); ",
-		  "}",
-		  "",
-		  "#ifdef ABHIJAY_DEBUG",
-		  "#define deb(...) cerr << \"[\"<< #__VA_ARGS__ << \"]:\", dbg_out(__VA_ARGS__);",
-		  "#else",
-		  "#define deb(...)",
-		  "#endif",
-		  "",
-		  "bool TT = true;",
-		  "",
 		  "void run_case(int tc){",
-		  "    // TODO: make sure all variables get reset.",
+		  "    // TODO: make sure all variables get reset.$0",
 		  "}",
 		  "",
 		  "int32_t main() {",
 		  "    ios_base::sync_with_stdio(false);",
 		  "#ifndef ABHIJAY_DEBUG",
-		  "    cin.tie(nullptr);",
+		  "    cin.tie(nullptr); ",
 		  "    freopen(\"debug.err\", \"w\", stderr);",
 		  "#endif",
 		  "    tatakae();",
-		  "}",
+		  "}"
 		],
-		"description": "CP_TEMPLATE"
+		"description": "CP_MINIMAL_TEMPLATE"
 	}
 
 	//   COMPETITIVE PROGRAMMING - > Snippets
@@ -366,6 +305,18 @@
 		"description": "GCD and LCM"
 	}
 
+	"compute factorial of n": {
+		"prefix": "include-factorial",
+		"body": [
+		  "",
+		  "int fact(int n){",
+		  "    return(n == 1 ? n : n * fact(n - 1));",
+		  "}",
+		  ""
+		],
+		"description": "compute factorial of n"
+	}
+
 
 	//////////////////////////////////////////////////////////////////  CODE - Snippets and Fucntions  ///////////////////////////////////////////////////////////////
 
@@ -508,6 +459,29 @@
 		  ""
 		],
 		"description": "printing vector"
+	}
+
+	"computer all permutations of elements in an array / vector": {
+		"prefix": "include-compute-permutations",
+		"body": [
+		  "",
+		  "void compute_permutations(vector<int64_t> a, int l, int r, vector<vector<int64_t>> &ans) ",
+		  "{ ",
+		  "    if (l == r) {",
+		  "        ans.push_back(a);",
+		  "    }",
+		  "    else",
+		  "    { ",
+		  "        for (int i = l; i <= r; i++) { ",
+		  "            swap(a[l], a[i]); ",
+		  "            compute_permutations(a, l+1, r, ans); ",
+		  "            swap(a[l], a[i]); ",
+		  "        } ",
+		  "    } ",
+		  "}",
+		  ""
+		],
+		"description": "computer all permutations of elements in an array / vector"
 	}
 
 	"count total digits in integer": {

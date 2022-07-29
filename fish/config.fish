@@ -51,6 +51,8 @@ if status is-interactive
         app $argv
     end
 
+    alias mygithub='cd /Users/abhijayrajvansh/Desktop/development/projects/Fire-Websites && py mygithub.py'
+
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  SRM - Elab   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

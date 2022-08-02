@@ -41,6 +41,7 @@
 	"Tracing DS and Points / IO Debugging": {
 		"prefix": "debugger",
 		"body": [
+		  "",
 		  "//यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति। शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः॥",
 		  "template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ",
 		  "istream& operator >> (istream &is, T_container &v) { ",
@@ -112,6 +113,7 @@
 		  "",
 		  "#ifdef ABHIJAY_DEBUG",
 		  "#define deb(...) __f(#__VA_ARGS__, __VA_ARGS__);",
+		  "",
 		  "template <typename Arg1>",
 		  "void __f(const char* name, Arg1&& arg1){",
 		  "    cerr << name << \" : \" << arg1 << endl;",
@@ -194,7 +196,7 @@
 		  "    ios::sync_with_stdio(false);",
 		  "#ifndef ABHIJAY_DEBUG",
 		  "    cin.tie(nullptr); ",
-		  "    freopen(\"debug.err\", \"w\", stderr);",
+		  "    freopen(\"debug.flush\", \"w\", stderr);",
 		  "#endif",
 		  "    tatakae();",
 		  "}"
@@ -321,6 +323,7 @@
 		  "int n; string s;",
 		  "cin >> n >> s;",
 		  "",
+		  "",
 		],
 		"description": "N Size String input"
 	}
@@ -363,6 +366,22 @@
 		  "vector<int64_t> $0"
 		],
 		"description": "integer vector"
+	}
+
+	"2D vector": {
+		"prefix": "2vecint",
+		"body": [
+		  "vector<vector<int64_t>> $0"
+		],
+		"description": "vector of vectors"
+	}
+
+	"3D vector": {
+		"prefix": "3vecint",
+		"body": [
+		  "vector<vector<vector<int64_t>>> $0"
+		],
+		"description": "vector of vectors of vectors"
 	}
 
 	"read stl": {
@@ -628,6 +647,7 @@
 		  "    for (int i = 1; i < n; i++) {",
 		  "        ans[i] = ans[i - 1] + a[i];",
 		  "    }",
+		  "",
 		  "    return ans;",
 		  "}",
 		  "",

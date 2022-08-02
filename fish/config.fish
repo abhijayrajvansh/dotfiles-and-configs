@@ -431,7 +431,7 @@ if status is-interactive
     #Competitive-Programming:-
 
     #desktop
-    alias aftercp='rm main.cpp a.out debug.flush main'
+    alias aftercp='desktop && rm main.cpp a.out debug.flush main'
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
     alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'

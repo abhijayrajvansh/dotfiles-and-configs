@@ -1,27 +1,29 @@
 /**   
  *    author:  abhijayrajvansh
- *    created: 26.07.2022 02:47:20
+ *    created: 02.08.2022 05:56:23
 **/
+#ifndef ABHIJAY_DEBUG
+    #pragma GCC optimize("O3,unroll-loops")
+    // #pragma GCC target("avx,avx2,sse4.2,bmi,bmi2,popcnt,lzcnt") // Gives SIGILL on SPOJ
+#endif
+
 #include <bits/stdc++.h>
-#define int int64_t
-#define tatakae() int tests = 1; if (TT) cin >> tests; for (int i = 1; i <= tests; i++) { run_case(i);} 
 using namespace std;
 
-constexpr char nl = '\n'; 
+#define int int64_t // avoiding int32_t overflow
+// procrastination is not an option! 
+#define tatakae() std::cout << std::fixed << std::setprecision(12); std::cerr << std::fixed << std::setprecision(3); auto start = std::chrono::high_resolution_clock::now(); int tests = 1; if (TT) cin >> tests; cerr << '\n'; for (int i = 1; i <= tests; i++) { if(print_case_no) cout << "Case #" << i << ": "; run_case(i); } if (time_taken) { auto stop = std::chrono::high_resolution_clock::now(); long double duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count(); std::cerr << "\nTime taken : " << duration / 1e9 << " seconds" << std::endl; }
+
+constexpr char nl = '\n'; // a slave of one's habits 
+
+bool print_case_no = false, time_taken = false, TT = true;
 
 void run_case(int tc){
-    int n;
-    cin >> n;
     
-    vector<int64_t> a(n);
-        
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
 }
 
 int32_t main() {
-    ios_base::sync_with_stdio(false);
+    ios::sync_with_stdio(false);
 #ifndef ABHIJAY_DEBUG
     cin.tie(nullptr); 
     freopen("debug.err", "w", stderr);

@@ -280,7 +280,7 @@ if status is-interactive
 
     # SRM and Academics:
 
-    alias srm='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics'
+    alias srm='cd /Users/abhijayrajvansh/Desktop/5th-SEM'
     alias academics='srm'
     alias tt='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics && open 4th-sem-TT.png'
     alias ct3='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics && open ct3-schedule.pdf'

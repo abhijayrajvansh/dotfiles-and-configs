@@ -125,10 +125,8 @@ if status is-interactive
 
     function deb # ABHIJAY_DEBUG FILE_NAME.cpp
         echo "[ABHIJAY_DEBUG MODE] Compiling" $argv.cpp" with G++17..."
-        sleep 1
-        # g++ -DABHIJAY_DEBUG main.cpp && ./a.out
+        # sleep 1
         g++ -std=c++17 -DABHIJAY_DEBUG $argv.cpp && ./a.out
-        # g++ -std=c++17 -O2 -DABHIJAY_DEBUG -Wshadow -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -fsanitize=address -fsanitize=undefined $argv.cpp -o a.out
     end
 
     function runall # runnig  and testing sample testcases
@@ -431,7 +429,6 @@ if status is-interactive
     #Competitive-Programming:-
 
     #desktop
-    alias aftercp='desktop && rm main.cpp a.out debug.flush main'
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
     alias comp='competitive-programming'
     alias contest-library='cd /Users/abhijayrajvansh/Desktop/contest-library'

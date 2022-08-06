@@ -183,7 +183,7 @@
 		  "#define int int64_t // avoiding int32_t overflow",
 		  "",
 		  "// procrastination is not an option! ",
-		  "#define tatakae() std::cout << std::fixed << std::setprecision(12); std::cerr << std::fixed << std::setprecision(3); auto start = std::chrono::high_resolution_clock::now(); int tests = 1; if (TT) cin >> tests; cerr << '\\n'; for (int i = 1; i <= tests; i++) { if(print_case_no) cout << \"Case #\" << i << \": \"; run_case(i); } if (time_taken) { auto stop = std::chrono::high_resolution_clock::now(); long double duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count(); std::cerr << \"\\nTime taken : \" << duration / 1e9 << \" seconds\" << std::endl; }",
+		  "#define tatakae() std::cout << std::fixed << std::setprecision(12); std::cerr << std::fixed << std::setprecision(3); auto start = std::chrono::high_resolution_clock::now(); int tests = 1; if (TT) cin >> tests; for (int i = 1; i <= tests; i++) { if(print_case_no) cout << \"Case #\" << i << \": \"; run_case(i); } if (time_taken) { auto stop = std::chrono::high_resolution_clock::now(); long double duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count(); std::cerr << \"\\nTime taken : \" << duration / 1e9 << \" seconds\" << std::endl; }",
 		  "",
 		  "constexpr char nl = '\\n'; // a slave of one's habits ",
 		  "",
@@ -412,6 +412,23 @@
 		  "",
 		],
 		"description": "N size Vector Input"
+	}
+
+	"Declaring and reading N pair wise vector": {
+		"prefix": "npairs",
+		"body": [
+		  "int n;",
+		  "cin >> n;",
+		  "vector<pair<int, int>> a(n);    ",
+		  "int x, y;",
+		  "",
+		  "for (int i = 0; i < n; i++) {",
+		  "    cin >> x >> y;",
+		  "    a[i] = {x, y};",
+		  "}",
+		  "",
+		],
+		"description": "Declaring and reading n pair wise vector"
 	}
 
 	"N Size String input": {

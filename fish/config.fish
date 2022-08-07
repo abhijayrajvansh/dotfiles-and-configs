@@ -427,6 +427,12 @@ if status is-interactive
 
 
     #Competitive-Programming:-
+    function main
+        contest-library
+        code .
+        desktop
+        prg main.cpp
+    end
 
     #desktop
     alias competitive-programming='cd /Users/abhijayrajvansh/Desktop/Competitive-Programming'
@@ -471,7 +477,6 @@ if status is-interactive
     alias cryptobot='projects && cd Cryptocurrency-Price-Bot && zsh bot-intro.sh'
     alias BIDcalulator='projects && cd Cryptocurrency-Biding-Calculator && zsh app-intro.sh && deb app.py' 
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-    alias main='desktop && code . && prg main.cpp'
     alias codepy='cd /Users/abhijayrajvansh/Desktop/programming-languages/python && code app.py'
 
     #Downloading Files:

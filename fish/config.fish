@@ -280,11 +280,9 @@ if status is-interactive
 
     alias srm='cd /Users/abhijayrajvansh/Desktop/5th-SEM'
     alias academics='srm'
-    alias tt='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics && open 4th-sem-TT.png'
-    alias ct3='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics && open ct3-schedule.pdf'
+    alias tt='cd /Users/abhijayrajvansh/Desktop/5th-SEM && oo tt.jpeg'
 
     #Programming environment:
-
     alias programming-environment='desktop && cd programming-environment'
     alias template='cd /Users/abhijayrajvansh/Desktop/programming-environment/Templates'
     alias abhijayrajvansh.cpp='template && prg abhijayrajvansh.cpp'
@@ -505,7 +503,8 @@ if status is-interactive
 
 
     # Startup commands:
-    echo "** Welcome Back Mr.Rajvansh **"
+    # echo "** Welcome Back Mr.Rajvansh **"
+    getcontrol
     desktop
 
     

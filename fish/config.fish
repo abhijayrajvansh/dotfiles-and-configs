@@ -457,6 +457,7 @@ if status is-interactive
     alias dsa='desktop && cd DataStructures-Algorithms'
     alias recursion='dsa && cd recursion'
     alias arrays='dsa && cd ARRAYS'
+    alias dp='cd /Users/abhijayrajvansh/Desktop/DataStructures-Algorithms/DYNAMIC-PROGRAMMING'
 
     # Github all push and commit && backup repo
     function push-dsa

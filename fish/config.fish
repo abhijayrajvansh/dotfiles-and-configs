@@ -455,7 +455,7 @@ if status is-interactive
     
     #DataStructures-Algorithms:-
     alias dsa='desktop && cd DataStructures-Algorithms'
-    alias recursion='dsa && cd recursion'
+    alias recursion='cd /Users/abhijayrajvansh/Desktop/DataStructures-Algorithms/RECURSION'
     alias arrays='dsa && cd ARRAYS'
     alias dp='cd /Users/abhijayrajvansh/Desktop/DataStructures-Algorithms/DYNAMIC-PROGRAMMING'
 

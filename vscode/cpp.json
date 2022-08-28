@@ -26,6 +26,10 @@
 	"cpp basic": {
 		"prefix": "cpp",
 		"body": [
+		  "/**",
+		  " *    author:   abhijayrajvansh",
+		  " *    created:  $CURRENT_DATE.$CURRENT_MONTH.$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+		  "**/"
 		  "#include <bits/stdc++.h>",
 		  "using namespace std;",
 		  "",
@@ -122,17 +126,6 @@
 	"description": "File Handling Debug"
 	}
 
-	"Shows Execution Time": {
-		"prefix": "timetaken",
-		"body": [
-		  "",
-		  "cerr << fixed << setprecision(2); cerr << \"\\nExecution Time: \" << (float)clock() / CLOCKS_PER_SEC << \" secs\" << '\\n'; ",
-		  ""
-		],
-		"description": "Shows Execution Time"
-	}
-
-
 	"CP_TEMPLATE": {
 		"prefix": "abhijay",
 		"body": [
@@ -204,15 +197,18 @@
 		  "template <typename Arg1, typename... Args>",
 		  "void __f(const char* names, Arg1&& arg1, Args&&... args){",
 		  "    int count_open = 0, len = 1;",
+		  "",
 		  "    for(int k = 1; ; ++k){",
 		  "        char cur = *(names + k);",
 		  "        count_open += (cur == '(' ? 1 : (cur == ')' ? -1: 0));",
+		  "",
 		  "        if (cur == ',' && count_open == 0){",
 		  "            const char* comma = names + k;",
 		  "            cerr.write(names, len) << \" : \" << arg1 << \" | \";",
 		  "            __f(comma + 1, args...);",
 		  "            return;",
 		  "        }",
+		  "",
 		  "        len = (cur == ' ' ? len : k + 1);",
 		  "    }",
 		  "}",
@@ -310,6 +306,19 @@
 
 	// Some quick printing...
 
+	"include multiple_tests": {
+		"prefix": "tests",
+		"body": [
+		  "int tests;",
+		  "cin >> tests;",
+		  "",
+		  "while(tests-- > 0){",
+		  "    $0",
+		  "}"
+		],
+		"description": "include multiple_tests"
+	}
+
 	"print YES ": {
 		"prefix": "pyes;",
 		"body": [
@@ -385,11 +394,9 @@
 	"For Loop For Repetition": {
 		"prefix": "rep",
 		"body": [
-		  "",
 		  "for (int i = 0; i < $1; i++) {",
 		  "    $0",
 		  "}",
-		  ""
 		],
 		"description": "For Loop For Repetition"
 	}

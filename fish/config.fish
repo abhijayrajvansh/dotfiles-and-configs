@@ -57,12 +57,9 @@ if status is-interactive
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  SRM - Elab   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        alias sepm='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics/Software-Engineering-and-Project-Management'
-        alias pqt='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics/Probability-and-Queueing-Theory'
-        alias os='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics/Operating-System'
-        alias daa='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academics/Design-and-Analysis-of-Algorithms'
-        alias daa-elab='cd /Users/abhijayrajvansh/Desktop/4th-Sem-Academic`s/Design-and-Analysis-of-Algorithms/elab'
-
+        alias cn='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Computer-Networks'
+        alias dm='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Discrete-Mathematics'
+        alias nra='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Network-Routing-Algorithm' 
         
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Codeforces   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

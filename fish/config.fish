@@ -64,6 +64,8 @@ if status is-interactive
         alias cn='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Computer-Networks'
         alias dm='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Discrete-Mathematics'
         alias nra='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Network-Routing-Algorithm' 
+        alias toc='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Theory-Of-Computation'
+        alias fla='toc'
         
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Codeforces   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -7,8 +7,8 @@ if status is-interactive
     # Custom Functions:- version update and shortcuts
     # Terminal Custom: -
     alias remove-executables='rm *.out'
-    # alias g++='g++-11'
-    # alias gcc='gcc-11'
+    alias g++='g++-12'
+    alias gcc='gcc-12'
     alias pip='pip3'
     alias python='python3'
     alias py='python'

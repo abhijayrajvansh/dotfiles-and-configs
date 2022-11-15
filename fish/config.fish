@@ -7,15 +7,12 @@ if status is-interactive
     # Custom Functions:- version update and shortcuts
     # Terminal Custom: -
     alias remove-executables='rm *.out'
-    alias g++='g++-11'
-    alias gcc='gcc-11'
-    alias cc='clang-13'
+    # alias g++='g++-11'
+    # alias gcc='gcc-11'
     alias pip='pip3'
     alias python='python3'
     alias py='python'
     alias kk='clear'
-    alias bb='cd ..'
-	alias nv='nvim'
     alias app='python app.py'
     alias oo='open .'
     alias notes='cd /Users/abhijayrajvansh/Desktop/files && prg notes.txt'

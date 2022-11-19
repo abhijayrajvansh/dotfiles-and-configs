@@ -499,7 +499,7 @@ if status is-interactive
 
     # Startup commands:
     # echo "** Welcome Back Mr.Rajvansh **"
-    getcontrol
+    # getcontrol
     desktop
 
     

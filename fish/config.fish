@@ -63,6 +63,7 @@ if status is-interactive
         alias nra='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Network-Routing-Algorithm' 
         alias toc='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Theory-Of-Computation'
         alias fla='toc'
+        alias certificates='cd /Users/abhijayrajvansh/Desktop/5th-SEM/Certificate'
         
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Codeforces   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

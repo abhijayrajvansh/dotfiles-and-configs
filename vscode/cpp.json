@@ -220,7 +220,7 @@
 		  "bool print_case_no = false, time_taken = false, TT = true;",
 		  "",
 		  "void run_case(int tc){",
-		  "    ",
+		  "    $0",
 		  "}",
 		  "",
 		  "int32_t main() {",

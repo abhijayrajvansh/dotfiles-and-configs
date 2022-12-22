@@ -310,7 +310,7 @@ if status is-interactive
 
     function fish_prompt
         set -l prompt_symbol '$: '
-        echo (set_color --bold green)'abhijay@macbook:'(set_color --bold blue)(prompt_pwd) \
+        echo (set_color --bold green)'abhijay@macbook:'(set_color --bold blue)(pwd) \
         (set_color --bold yellow)$prompt_symbol(set_color normal)
     end
 

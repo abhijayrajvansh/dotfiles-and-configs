@@ -509,6 +509,7 @@ if status is-interactive
 
 # Anaconda:
 alias conda-activate='eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source'
+alias conda-deactivate='conda deactivate'
 
 # <<< conda initialize <<<
 desktop

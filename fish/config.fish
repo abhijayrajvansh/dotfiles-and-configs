@@ -1,4 +1,5 @@
 set fish_greeting
+
 if status is-interactive
     clear
     #   here goes startup message
@@ -309,7 +310,7 @@ if status is-interactive
     # end
 
     function fish_prompt
-        set -l prompt_symbol '$: '
+        set -l prompt_symbol '$:'
         echo (set_color --bold green)'abhijay@macbook:'(set_color --bold blue)(pwd) \
         (set_color --bold yellow)$prompt_symbol(set_color normal)
     end
@@ -501,20 +502,15 @@ if status is-interactive
     # Startup commands:
     # echo "** Welcome Back Mr.Rajvansh **"
     # getcontrol
-    desktop
+   
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
-    
+# Anaconda:
+alias conda-activate='eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source'
+
+# <<< conda initialize <<<
+desktop
+
 end
-
-#Archived Functions:
-
-# Creating Contest Folder:-
-    # function cf-contest
-    #     cd
-    #     cd desktop/competitive-programming/contest-library/
-    #     code .
-    #     codeforces
-    #     mkdir $argv
-    #     cd $argv
-    #     code-E
-    # end

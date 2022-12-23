@@ -508,8 +508,8 @@ if status is-interactive
 # eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # Anaconda:
-alias conda-activate='eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source'
-alias conda-deactivate='conda deactivate'
+alias conda-on='eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source'
+alias conda-off='conda deactivate'
 
 # <<< conda initialize <<<
 desktop

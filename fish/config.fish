@@ -274,7 +274,7 @@ if status is-interactive
 
     # SRM and Academics:
 
-    alias srm='cd /Users/abhijayrajvansh/Desktop/5th-SEM'
+    alias srm='cd /Users/abhijayrajvansh/Desktop/6th-Sem'
     alias academics='srm'
     alias tt='cd /Users/abhijayrajvansh/Desktop/5th-SEM && oo tt.jpeg'
 

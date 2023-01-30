@@ -276,7 +276,7 @@ if status is-interactive
 
     alias srm='cd /Users/abhijayrajvansh/Desktop/6th-Sem'
     alias academics='srm'
-    alias tt='cd /Users/abhijayrajvansh/Desktop/5th-SEM && oo tt.jpeg'
+    alias tt='cd /Users/abhijayrajvansh/Desktop/6th-SEM && oo tt.jpeg'
 
     #Programming environment:
     alias programming-environment='desktop && cd programming-environment'
@@ -309,10 +309,16 @@ if status is-interactive
     #     (set_color --bold yellow)$prompt_symbol(set_color normal) 
     # end
 
+    # function fish_prompt
+    #     set -l prompt_symbol '$:'
+    #     echo (set_color --bold green)'abhijayrajvansh@macbook'(set_color --bold blue)(prompt_pwd) \
+    #     (set_color --bold yellow)$prompt_symbol(set_color normal)
+    # end
+
     function fish_prompt
-        set -l prompt_symbol '$:'
-        echo (set_color --bold green)'abhijay@macbook:'(set_color --bold blue)(pwd) \
-        (set_color --bold yellow)$prompt_symbol(set_color normal)
+        set -l prompt_symbol '$: '
+        echo (set_color --bold green)'abhijay@macbook '(set_color blue)() \
+        (set_color yellow)$prompt_symbol(set_color normal)
     end
 
     function clean
@@ -502,16 +508,9 @@ if status is-interactive
     # Startup commands:
     # echo "** Welcome Back Mr.Rajvansh **"
     # getcontrol
-   
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # Anaconda:
 alias conda-on='eval /Users/abhijayrajvansh/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source'
 alias conda-off='conda deactivate'
-
-# <<< conda initialize <<<
-desktop
 
 end

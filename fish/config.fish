@@ -14,6 +14,8 @@ if status is-interactive
     alias python='python3'
     alias py='python'
     alias kk='clear'
+    alias kkk='clear'
+    alias lkk='clear'
     alias app='python app.py'
     alias oo='open .'
     alias notes='cd /Users/abhijayrajvansh/Desktop/files && prg notes.txt'
@@ -317,8 +319,8 @@ if status is-interactive
 
     function fish_prompt
         set -l prompt_symbol '$: '
-        echo (set_color --bold green)'abhijay@macbook '(set_color green)() \
-        (set_color --bold yellow)$prompt_symbol(set_color normal)
+        echo (set_color --bold green)'abhijay@macbook'(set_color --italic green)(prompt_pwd) \
+        (set_color --bold white)$prompt_symbol(set_color normal)
     end
 
     function clean

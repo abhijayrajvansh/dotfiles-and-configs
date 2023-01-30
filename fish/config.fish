@@ -19,6 +19,7 @@ if status is-interactive
     alias app='python app.py'
     alias oo='open .'
     alias notes='cd /Users/abhijayrajvansh/Desktop/files && prg notes.txt'
+    alias nv ='nvim'
     
     # login bots
     alias cf-login='codeforces-login'
